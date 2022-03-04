@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Link-01",
+    "id": "8a3b8330",
+    "url": "https://link-01.example.com/",
+    "date_created": 1646352082090,
+    "date_last_voted": null,
+    "votes_count": 99,
+    "user_voted": 0
+  },
+  {
+    "name": "Link-02",
+    "id": "dec27532",
+    "url": "https://link-02.example.com/",
+    "date_created": 1646262402000,
+    "date_last_voted": null,
+    "votes_count": 100,
+    "user_voted": 0
+  },
+  {
+    "name": "Link-03",
+    "id": "1701e14a",
+    "url": "https://link-03.example.com/",
+    "date_created": 1633996800000,
+    "date_last_voted": null,
+    "votes_count": 80,
+    "user_voted": 1
+  },
+  {
+    "name": "Link-04",
+    "id": "68789c70",
+    "url": "https://link-04.example.com/",
+    "date_created": 1646127406519,
+    "date_last_voted": null,
+    "votes_count": -16,
+    "user_voted": -1
+  },
+  {
+    "name": "Link-05",
+    "id": "c7f19c2f",
+    "url": "https://link-05.example.com/",
+    "date_created": 1646266002000,
+    "date_last_voted": null,
+    "votes_count": 18,
+    "user_voted": 0
+  },
+  {
+    "name": "Link-06",
+    "id": "2efcdbd4",
+    "url": "https://link-06.example.com/",
+    "date_created": 1646127404484,
+    "date_last_voted": null,
+    "votes_count": 81,
+    "user_voted": 0
+  },
+  {
+    "name": "Link-07",
+    "id": "1a3fc9b4",
+    "url": "https://link-07.example.com/",
+    "date_created": 1646127404484,
+    "date_last_voted": null,
+    "votes_count": 80,
+    "user_voted": 0
+  }
+]
