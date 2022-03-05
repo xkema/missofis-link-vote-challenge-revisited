@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
-import feedItemsRaw from './data/mock.json';
+import { useOutletContext } from 'react-router-dom';
 import FeedItem from './FeedItem';
 import { sortFeed } from "./utils/sortFeed";
 
 function Feed(props) {
   
-  const [feedItems, setFeedItems] = useState(feedItemsRaw);
   const [orderBy, setOrderBy] = useState('');
-  const [currentPage, setCurrentPage] = useState(2);
-  const [numPages, setNumPages] = useState(1);
-  const [pageLength] = useState(3);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [numPages, setNumPages] = useState(0);
+  const [pageLength] = useState(5);
   const [promptStatus, setPromptStatus] = useState(true);
   const [feedItemIdOnPrompt, setFeedItemIdOnPrompt] = useState(null);
+
+  const [feedItems, setFeedItems] = useOutletContext();
 
   useEffect(() => {
     setNumPages(Math.ceil(feedItems.length / pageLength));
@@ -22,6 +23,8 @@ function Feed(props) {
       setCurrentPage(0);
     } else if(currentPage > numPages) {
       setCurrentPage(numPages);
+    } else if(currentPage === 0 && feedItems.length > 0) {
+      setCurrentPage(1);
     }
   }, [currentPage, feedItems.length, numPages]);
 
@@ -68,10 +71,6 @@ function Feed(props) {
   const handleDeleteRequest = (e, feedItemId) => {
     setFeedItemIdOnPrompt(feedItemId);
     setPromptStatus(false);
-
-    props.setNotifications(prevState => {
-      return [...prevState, { message: 'Item Removed!', date: Date.now() }];
-    });
   };
 
   const handleDelete = () => {
@@ -84,13 +83,13 @@ function Feed(props) {
     setPromptStatus(true);
   };
 
-  const handlePrevPage = (event) => {
+  const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
-  const handleNextPage = (event) => {
+  const handleNextPage = () => {
     if (currentPage < numPages) {
       setCurrentPage(currentPage + 1);
     }

@@ -1,22 +1,35 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
+import { readStorageData, updateStorageData } from './utils/storage';
 import './App.css';
-import Feed from "./Feed";
-import NotificationContainer from './NotificationContainer';
 
 function App(props) {
 
-  const [notifications, setNotifications] = useState([]);
+  const [feedItems, setFeedItems] = useState([]);
+
+  useEffect(() => {
+    setFeedItems(readStorageData().items);
+  }, []);
+
+  useEffect(() => {
+    updateStorageData(feedItems);
+  }, [feedItems]);
 
   return (
     <div>
-      <header>header</header>
+      <header>
+        <nav>
+          <NavLink to="/">home</NavLink>
+          <NavLink to="add">add</NavLink>
+        </nav>
+      </header>
       <main>
         <span>main</span>
-        <Feed setNotifications={setNotifications} />
+        <Outlet context={[feedItems, setFeedItems]} />
+        <span>~~~{feedItems.length} total</span>
       </main>
       <aside>aside</aside>
       <footer>footer</footer>
-      <NotificationContainer notifications={notifications} />
     </div>
   );
 }

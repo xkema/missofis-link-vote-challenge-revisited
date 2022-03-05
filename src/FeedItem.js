@@ -6,7 +6,7 @@ function FeedItem(props) {
       <br /><span>{props.feedItem.url}</span>
       <br /><span>{props.feedItem.date_created}</span>
       <br /><span><small>{new Date(props.feedItem.date_created).toString()}</small></span>
-      <br /><span>{typeof props.feedItem.date_last_voted}</span>
+      <br /><span>{props.feedItem.date_last_voted}</span>
       _______<span>{props.feedItem.votes_count}</span>
       _______<span>{props.feedItem.user_voted}</span>
       <br />
