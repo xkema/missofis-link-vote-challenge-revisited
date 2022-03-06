@@ -5,7 +5,6 @@
   column-gap: 2rem;
   align-items: center;
   position: relative;
-  padding: 2rem 0;
 }
 
 .FeedItem:hover {
@@ -14,6 +13,16 @@
 
 .FeedItem:hover .FeedItem-options-delete {
   display: block;
+}
+
+.FeedItem-left {
+
+}
+
+.FeedItem-right {
+  position: relative;
+  flex-grow: 1;
+  padding: 2rem 0;
 }
 
 .FeedItem-votes_count {
@@ -34,6 +43,13 @@
 
 .FeedItem-url {
   font-size: 1rem;
+  padding: 0;
+}
+
+.FeedItem-checkmark {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0;
 }
 
 .FeedItem-options-vote {
