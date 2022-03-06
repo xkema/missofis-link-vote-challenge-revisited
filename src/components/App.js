@@ -16,20 +16,19 @@ function App(props) {
   }, [feedItems]);
 
   return (
-    <div>
-      <header>
+    <div className='App'>
+      <header className='App-header'>
         <nav>
           <NavLink to="/">home</NavLink>
           <NavLink to="add">add</NavLink>
         </nav>
       </header>
-      <main>
-        <span>main</span>
+      <main className='App-content'>
         <Outlet context={[feedItems, setFeedItems]} />
         <span>~~~{feedItems.length} total</span>
       </main>
-      <aside>aside</aside>
-      <footer>footer</footer>
+      <aside className='App-sidebar'>aside</aside>
+      <footer className='App-footer'>footer</footer>
     </div>
   );
 }
