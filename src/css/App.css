@@ -51,6 +51,12 @@
   margin-right: 0.5rem;  
 }
 
+.App-header > nav > a:last-child {
+  color: #FFF;
+  background-color: #c01930;
+  text-decoration: none;
+}
+
 /* === content */
 
 .App-content > * {
@@ -70,10 +76,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-/* === feed */
-
-
 
 /* === sidebar */
 

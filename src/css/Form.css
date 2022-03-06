@@ -41,5 +41,9 @@
 }
 
 .Form-extras p {
+  margin: 0;
+}
+
+.Form-extras p {
   text-align: center;
 }

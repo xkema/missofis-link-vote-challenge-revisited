@@ -11,8 +11,7 @@
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border-bottom: 1px solid gainsboro;
-  display: flex;
-  justify-content: right;
+  text-align: right;
 }
 
 .Feed-modal {
@@ -30,6 +29,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.25);
   display: flex;
+  backdrop-filter: blur(1px);
 }
 
 .Feed-modal.modal-hidden {
@@ -41,6 +41,11 @@
   border: 1px solid gainsboro;
   border-radius: 0.5rem;
   padding: 3rem 6rem;
+  text-align: center;  
+}
+
+.Feed-modal-options > button {
+  margin: 0 0.5rem;
 }
 
 .Feed-list {
