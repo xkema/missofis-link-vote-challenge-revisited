@@ -51,7 +51,7 @@ function App(props) {
           feedItems.length === 0 && 
           <>
             <hr />
-            <p>No feed items to show right now. Please use `Submit Link` button at the menu to add items to the feed.</p>
+            <p>No feed items to show right now. Please use "Submit Link" button at the menu to add items to the feed.</p>
             <p>You'll find an helper inside that fills the feed with random number of items, in case you don't want to do it manually.</p>
           </>
         }

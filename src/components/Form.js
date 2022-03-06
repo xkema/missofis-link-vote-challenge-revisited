@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { getFeedItemTemplate } from '../utils/getFeedItemTemplate';
+import '../css/Form.css';
 
 function Form(props) {
 

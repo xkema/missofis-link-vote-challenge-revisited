@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import FeedItem from './FeedItem';
 import { sortFeed } from "../utils/sortFeed";
+import '../css/Feed.css';
 
 function Feed(props) {
   
@@ -104,10 +105,11 @@ function Feed(props) {
           <option value="less">less voted / a &rarr; z</option>
         </select>
       </div>
-      <div className='Feed-modal' hidden={promptStatus}>
-        sure?
-        <button onClick={handleCancel}>nope</button>
-        <button onClick={handleDelete}>yep</button>
+      <div className={promptStatus ? 'Feed-modal modal-hidden' : 'Feed-modal modal-visible'} hidden={promptStatus}>
+        <div className='Feed-modal-options'>
+          <button onClick={handleCancel}>nope</button>
+          <button onClick={handleDelete}>yep</button>
+        </div>
       </div>
       <div className='Feed-list'>
         <ul>
