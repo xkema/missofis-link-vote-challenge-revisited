@@ -130,9 +130,9 @@ function Feed(props) {
         </ul>
       </div>
       <div className='Feed-pagination'>
-        <button onClick={handlePrevPage}>prev</button>
+        <button onClick={handlePrevPage}>&larr; prev</button>
         <span>{currentPage} of {numPages}</span>
-        <button onClick={handleNextPage}>next</button>
+        <button onClick={handleNextPage}>next &rarr;</button>
       </div>
     </div>
   );
