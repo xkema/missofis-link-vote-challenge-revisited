@@ -1,3 +1,9 @@
+/**
+ * Returns a data template for feed item
+ * @param {string} name Name of the item
+ * @param {string} url A valid URL
+ * @returns {object} An object template represents feed item in a db
+ */
 const getFeedItemTemplate = (name='', url='') => {
   return {
     name: name,

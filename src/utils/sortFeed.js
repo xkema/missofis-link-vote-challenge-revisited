@@ -1,3 +1,9 @@
+/**
+ * Sorts a given feed item array
+ * @param {string} orderBy "most", "less" or "" (empty string)
+ * @param {array} feedItems Array of feed items to be sorted
+ * @returns Sorted copy of the array
+ */
 const sortFeed = (orderBy = '', feedItems = []) => {
   let itemsSorted = [...feedItems];
   if (orderBy === 'most') {
