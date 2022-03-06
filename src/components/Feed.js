@@ -100,15 +100,16 @@ function Feed(props) {
     <div className='Feed'>
       <div className='Feed-sort'>
         <select value={orderBy} onChange={handleFeedSort}>
-          <option value="">order by</option>
-          <option value="most">most voted / z &rarr; a</option>
-          <option value="less">less voted / a &rarr; z</option>
+          <option value="">Order By ...</option>
+          <option value="most">Most Voted / z &rarr; a</option>
+          <option value="less">Less Voted / a &rarr; z</option>
         </select>
       </div>
       <div className={promptStatus ? 'Feed-modal modal-hidden' : 'Feed-modal modal-visible'} hidden={promptStatus}>
         <div className='Feed-modal-options'>
-          <button onClick={handleCancel}>nope</button>
-          <button onClick={handleDelete}>yep</button>
+          <p>You're about to delete an item from the feed. Sure?</p>
+          <button onClick={handleCancel}>Cancel</button>
+          <button onClick={handleDelete}>Delete!</button>
         </div>
       </div>
       <div className='Feed-list'>

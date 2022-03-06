@@ -23,7 +23,7 @@ function App(props) {
     if (location.pathname === '/') {
       title = 'Recent Items';
     } else if(location.pathname === '/add') {
-      title = 'Submit New Link';
+      title = 'Submit Link';
     }
     setContentTitle(title);
   }, [location]);
@@ -31,10 +31,10 @@ function App(props) {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>LinkVOTE Challenge Revisited</h1>
+        <h1>Link<b>VOTE</b> Challenge Revisited</h1>
         <nav>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="add">Submit Link</NavLink>
+          <NavLink to="add">+ Submit Link</NavLink>
         </nav>
       </header>
       <main className='App-content'>
@@ -45,19 +45,20 @@ function App(props) {
         <Outlet context={[feedItems, setFeedItems]} />
       </main>
       <aside className='App-sidebar'>
-        <h3>Hello!</h3>
-        <p>This is a demo application coded with <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React</a> JavaScript library.</p>        
+        <h3>&rsaquo; Hello!</h3>
+        <p>This page, is a demo application coded with <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React</a> JavaScript library.</p>        
         {
           feedItems.length === 0 && 
           <>
             <hr />
-            <p>No feed items to show right now. Please use "Submit Link" button at the menu to add items to the feed.</p>
-            <p>You'll find an helper inside that fills the feed with random number of items, in case you don't want to do it manually.</p>
+            <p>No feed items to show right now. It is ok to see an empty pagination or a collapsed panel in the view. Nobody hurts!</p>
+            <p>Please use "Submit Link" button at the menu to add items to the feed.</p>
+            <p>You'll find an helper button right below the the form, that fills the feed with random number of items, in case you don't want to do it manually.</p>
           </>
         }
       </aside>
       <footer className='App-footer'>
-        <span>LinkVOTE Challenge Revisited</span>
+        <span>Link<b>VOTE</b> Challenge Revisited</span>
         <span><a href="https://github.com/xkema/missofis-link-vote-challenge-revisited" target="_blank" rel="noopener noreferrer">GitHub</a></span>
       </footer>
     </div>

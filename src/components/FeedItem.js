@@ -10,8 +10,8 @@ function FeedItem(props) {
         <h4 className='FeedItem-name'>{props.feedItem.name}</h4>
         <a className='FeedItem-url' href={props.feedItem.url} target="_blank" rel="noopener noreferrer">{props.feedItem.url}</a>
         <div className='FeedItem-options-vote'>
-          <button onClick={(e) => { props.handleDownVote(e, props.feedItem.id) }}>downvote</button>
-          <button onClick={(e) => { props.handleUpVote(e, props.feedItem.id) }}>upvote</button>
+          <button onClick={(e) => { props.handleDownVote(e, props.feedItem.id) }} className={'button-borderless'}>&darr; downvote</button>
+          <button onClick={(e) => { props.handleUpVote(e, props.feedItem.id) }} className={'button-borderless'}>&uarr; upvote</button>
         </div>
         <div className='FeedItem-extras'>
           <span className='FeedItem-id'>{props.feedItem.id}</span>
@@ -20,7 +20,7 @@ function FeedItem(props) {
           <span className='FeedItem-user_voted'>user_voted: {props.feedItem.user_voted}</span>          
         </div>
         <div className='FeedItem-options-delete'>
-          <button onClick={(e) => { props.handleDeleteRequest(e, props.feedItem.id) }}>delete</button>
+          <button onClick={(e) => { props.handleDeleteRequest(e, props.feedItem.id) }} className={'button-borderless'}>delete</button>
         </div>
       </div>
     </div>
