@@ -24,7 +24,7 @@ function FeedItem(props) {
           <span className='FeedItem-user_voted'>user_voted: {props.feedItem.user_voted}</span>          
         </div>
         <div className='FeedItem-options-delete'>
-          <button onClick={(e) => { props.handleDeleteRequest(e, props.feedItem.id) }} className={'button-borderless'}>delete</button>
+          <button onClick={(e) => { props.handleDeleteRequest(e, props.feedItem) }} className={'button-borderless'}>delete</button>
         </div>
       </div>
     </div>

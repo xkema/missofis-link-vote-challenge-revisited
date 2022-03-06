@@ -13,7 +13,7 @@ function Feed(props) {
   const [promptStatus, setPromptStatus] = useState(true);
   const [feedItemIdOnPrompt, setFeedItemIdOnPrompt] = useState(null);
 
-  const [feedItems, setFeedItems] = useOutletContext();
+  const [feedItems, setFeedItems, notify] = useOutletContext();
 
   useEffect(() => {
     setNumPages(Math.ceil(feedItems.length / pageLength));
@@ -69,14 +69,15 @@ function Feed(props) {
     setFeedItems(feedItemsUpdated);
   };
 
-  const handleDeleteRequest = (e, feedItemId) => {
-    setFeedItemIdOnPrompt(feedItemId);
+  const handleDeleteRequest = (e, feedItem) => {
+    setFeedItemIdOnPrompt(feedItem);
     setPromptStatus(false);
   };
 
   const handleDelete = () => {
-    const feedItemsUpdated = feedItems.filter(feedItem => feedItem.id !== feedItemIdOnPrompt);
+    const feedItemsUpdated = feedItems.filter(feedItem => feedItem.id !== feedItemIdOnPrompt.id);
     setFeedItems(feedItemsUpdated);
+    notify('Item "'+feedItemIdOnPrompt.name+'" has removed from feed!');
     setPromptStatus(true);
   };
   

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { readStorageData, updateStorageData } from '../utils/storage';
+import NotificationContainer from './NotificationContainer';
+import { useNotifications } from '../hooks/useNotifications';
 import '../css/App.css';
 
 function App(props) {
@@ -8,10 +10,16 @@ function App(props) {
   const [feedItems, setFeedItems] = useState([]);
   const [contentTitle, setContentTitle] = useState('Unknown Page');
 
-  let location = useLocation();
+  const location = useLocation();
+
+  const [stateX, notify] = useNotifications();
 
   useEffect(() => {
-    setFeedItems(readStorageData().items);
+    const storageItems = readStorageData().items;
+    if (storageItems && storageItems.length === 0) {
+      notify('No feed items to list, please submit some!');
+    }
+    setFeedItems(storageItems);
   }, []);
 
   useEffect(() => {
@@ -42,7 +50,7 @@ function App(props) {
           <h2>{contentTitle}</h2>
           <span># of total feed items: {feedItems.length}</span>
         </div>
-        <Outlet context={[feedItems, setFeedItems]} />
+        <Outlet context={[feedItems, setFeedItems, notify]} />
       </main>
       <aside className='App-sidebar'>
         <h3>&rsaquo; Hello!</h3>
@@ -61,6 +69,7 @@ function App(props) {
         <span>Link<b>VOTE</b> Challenge Revisited</span>
         <span><a href="https://github.com/xkema/missofis-link-vote-challenge-revisited" target="_blank" rel="noopener noreferrer">GitHub</a></span>
       </footer>
+      <NotificationContainer notifications={stateX.notifications} />
     </div>
   );
 }
