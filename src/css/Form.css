@@ -1,5 +1,45 @@
 /* === form */
 
 .Form {
-  
+  padding: 1.5rem 1rem;
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+.Form button,
+.Form-extras button {
+  max-width: fit-content;
+}
+
+.Form button {
+  align-self: flex-end;
+}
+
+.Form input[type="text"],
+.Form input[type="url"] {
+  width: 100%;
+}
+
+.Form > label > span {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.Form-extras {
+  padding: 1rem;
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.Form-extras p {
+  text-align: center;
 }

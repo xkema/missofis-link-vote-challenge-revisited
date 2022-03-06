@@ -1,5 +1,64 @@
 /* === feeditem */
 
 .FeedItem {
-  
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
 }
+
+.FeedItem:hover {
+  background-color: whitesmoke;
+}
+
+.FeedItem:hover .FeedItem-options-delete {
+  display: block;
+}
+
+.FeedItem-votes_count {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  min-width: 2rem;
+  text-align: center;
+  border-right: 1px solid gainsboro;
+}
+
+.FeedItem-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+.FeedItem-url {
+  font-size: 1rem;
+}
+
+.FeedItem-options-vote {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.25rem;
+}
+
+.FeedItem-extras {
+  display: none;
+}
+
+.FeedItem-id {}
+.FeedItem-date_created {}
+.FeedItem-date_last_voted {}
+.FeedItem-user_voted {}
+
+.FeedItem-options-delete {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 0.25rem;
+}
+
+
+
+
+
