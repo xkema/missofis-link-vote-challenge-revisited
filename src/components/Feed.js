@@ -96,20 +96,20 @@ function Feed(props) {
   };
 
   return (
-    <div>
-      <div>
+    <div className='Feed'>
+      <div className='Feed-sort'>
         <select value={orderBy} onChange={handleFeedSort}>
           <option value="">order by</option>
           <option value="most">most voted / z &rarr; a</option>
           <option value="less">less voted / a &rarr; z</option>
         </select>
       </div>
-      <div hidden={promptStatus}>
+      <div className='Feed-modal' hidden={promptStatus}>
         sure?
         <button onClick={handleCancel}>nope</button>
         <button onClick={handleDelete}>yep</button>
       </div>
-      <div>
+      <div className='Feed-list'>
         <ul>
           {
             clipFeed(pageLength, currentPage, sortFeed(orderBy, feedItems)).map((feedItem) => {
@@ -126,7 +126,7 @@ function Feed(props) {
           }
         </ul>
       </div>
-      <div>
+      <div className='Feed-pagination'>
         <button onClick={handlePrevPage}>prev</button>
         <span>{currentPage} of {numPages}</span>
         <button onClick={handleNextPage}>next</button>
