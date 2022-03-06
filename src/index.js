@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './App';
-import Feed from './Feed';
-import Form from './Form';
-import './index.css';
+import App from './components/App';
+import Feed from './components/Feed';
+import Form from './components/Form';
+import './css/index.css';
 
 ReactDOM.render(
   <React.StrictMode>

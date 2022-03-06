@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { readStorageData, updateStorageData } from './utils/storage';
-import './App.css';
+import { readStorageData, updateStorageData } from '../utils/storage';
+import '../css/App.css';
 
 function App(props) {
 

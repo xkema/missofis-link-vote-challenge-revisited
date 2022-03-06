@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import FeedItem from './FeedItem';
-import { sortFeed } from "./utils/sortFeed";
+import { sortFeed } from "../utils/sortFeed";
 
 function Feed(props) {
   
