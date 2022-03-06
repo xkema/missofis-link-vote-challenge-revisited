@@ -3,12 +3,16 @@ import '../css/FeedItem.css';
 function FeedItem(props) {
   return (
     <div className='FeedItem'>
-      <div>
+      <div className='FeedItem-left'>
         <span className='FeedItem-votes_count'>{props.feedItem.votes_count}<br /> <small>votes</small></span>
       </div>
-      <div>
+      <div className='FeedItem-right'>
         <h4 className='FeedItem-name'>{props.feedItem.name}</h4>
         <a className='FeedItem-url' href={props.feedItem.url} target="_blank" rel="noopener noreferrer">{props.feedItem.url}</a>
+        {
+          props.feedItem.user_voted === 1 &&
+          <span className='FeedItem-checkmark'>&#10003;</span>
+        }
         <div className='FeedItem-options-vote'>
           <button onClick={(e) => { props.handleDownVote(e, props.feedItem.id) }} className={props.feedItem.user_voted < 1 ? 'button-borderless element-hidden' : 'button-borderless'}>&darr; downvote</button>
           <button onClick={(e) => { props.handleUpVote(e, props.feedItem.id) }} className={props.feedItem.user_voted === 1 ? 'button-borderless element-hidden' : 'button-borderless'}>&uarr; upvote</button>

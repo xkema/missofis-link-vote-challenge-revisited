@@ -109,7 +109,7 @@ function Feed(props) {
         <div className='Feed-modal-options'>
           <p>You're about to delete an item from the feed. Sure?</p>
           <button onClick={handleCancel}>Cancel</button>
-          <button onClick={handleDelete}>Delete!</button>
+          <button onClick={handleDelete}>Delete</button>
         </div>
       </div>
       <div className='Feed-list'>
