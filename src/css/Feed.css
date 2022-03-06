@@ -49,7 +49,7 @@
 }
 
 .Feed-list {
-
+  min-height: 1rem;
 }
 
 .Feed-list > ul {
