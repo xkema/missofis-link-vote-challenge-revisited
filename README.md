@@ -13,3 +13,7 @@ Here are the quick definitions for the commands:
 - `main` - Main branch to record project history
 - `development` - Project without styles
 - `ui/basic` - Project with a styled theme
+
+## Demo
+
+https://xkema.github.io/missofis-link-vote-challenge-revisited/basic/
