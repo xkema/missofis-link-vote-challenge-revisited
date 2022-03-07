@@ -3,6 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import FeedItem from './FeedItem';
 import { sortFeed } from "../utils/sortFeed";
 import '../css/Feed.css';
+import { clipFeed } from '../utils/clipFeed';
 
 function Feed(props) {
   
@@ -28,12 +29,6 @@ function Feed(props) {
       setCurrentPage(1);
     }
   }, [currentPage, feedItems.length, numPages]);
-
-  const clipFeed = (pageLength, currentPage, feedItemsSorted) => {
-    const start = (currentPage - 1) * pageLength;
-    const end = start + pageLength;
-    return feedItemsSorted.slice(start, end);
-  };
 
   const handleFeedSort = (e) => {
     setOrderBy(e.target.value);
