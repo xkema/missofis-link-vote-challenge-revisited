@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/missofis-link-vote-challenge-revisited/basic/static/css/main.951a0e96.css",
+    "main.js": "/missofis-link-vote-challenge-revisited/basic/static/js/main.8f9ed2d1.js",
+    "index.html": "/missofis-link-vote-challenge-revisited/basic/index.html",
+    "main.951a0e96.css.map": "/missofis-link-vote-challenge-revisited/basic/static/css/main.951a0e96.css.map",
+    "main.8f9ed2d1.js.map": "/missofis-link-vote-challenge-revisited/basic/static/js/main.8f9ed2d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.951a0e96.css",
+    "static/js/main.8f9ed2d1.js"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/missofis-link-vote-challenge-revisited/bare/static/css/main.31d6cfe0.css",
+    "main.js": "/missofis-link-vote-challenge-revisited/bare/static/js/main.512142e6.js",
+    "index.html": "/missofis-link-vote-challenge-revisited/bare/index.html",
+    "main.512142e6.js.map": "/missofis-link-vote-challenge-revisited/bare/static/js/main.512142e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.512142e6.js"
+  ]
+}
